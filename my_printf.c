@@ -28,6 +28,10 @@ int _printf(const char *format, ...)
 			{
 				num += _putchar(va_arg(ptr, int));
 			}
+			else if (format[i + 1] == 's')
+			{
+				num += print_string(va_arg(ptr, char *));
+			}
 			i += 2;
 		}
 	}
