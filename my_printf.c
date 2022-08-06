@@ -39,5 +39,7 @@ int _printf(const char *format, ...)
 			i += 2;
 		}
 	}
+	va_end(ptr);
+
 	return (num);
 }
