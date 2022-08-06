@@ -9,6 +9,7 @@
 int main(void)
 {
 	int y;
+
 	y = _printf("Hello %c %s world\n", 'P', "Ife");
 	printf("n = %d\n", y);
 	return (0);
