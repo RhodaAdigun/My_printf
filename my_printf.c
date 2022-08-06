@@ -36,6 +36,10 @@ int _printf(const char *format, ...)
 			{
 				num += _putchar('%');
 			}
+			else if (format[i + 1] == 'd')
+			{
+				num += print_number_base(va_arg(ptr, int *), 10);
+			}
 			i += 2;
 		}
 	}
