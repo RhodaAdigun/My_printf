@@ -9,38 +9,39 @@ char *num_str(int num, int base)
 {
 	int i = 0, j, rem;
 	char tmp[65];
-	char *container;
+	char *container = malloc(sizeof(char) * 65);
 
-	container = tmp;
+	if (container == NULL)
+		return (NULL);
 	if (num == 0)
 	{
-		*container = '0';
-		*container++ = '\0';
+		container = "0";
 		return (container);
 	}
-	if (num < 0)
+	else if (num < 0)
 	{
-		*container = '-';
-		num *= -1;
+		_putchar('-');
+		num = -1 * num;
 	}
 	while (num)
 	{
 		rem = num % base;
 		if (rem >= 10)
 		{
-			tmp[i] = 'a' + (rem - 10);
+			tmp[i] = (rem % 10) + 'a';
 		}
 		else
 		{
 			tmp[i] = '0' + rem;
 		}
-		num = num / 10;
+		num = num / base;
 		i++;
 	}
 	for (j = 0; j < i; j++)
 	{
-		*(container + j) = tmp[i - 1 -j];
+		container[j] = tmp[i - j - 1];
 	}
-	*(container + j) = '\0';
+	container[j] = '\0';
 	return (container);
+	free(container);
 }

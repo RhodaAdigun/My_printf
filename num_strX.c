@@ -9,13 +9,13 @@ char *num_strX(int num, int base)
 {
 	int i = 0, j, rem;
 	char tmp[65];
-	char *container;
+	char *container = malloc(sizeof(char) * 65);
 
-	container = tmp;
+	if (container == NULL)
+		return (NULL);
 	if (num == 0)
 	{
-		*container = '0';
-		*container++ = '\0';
+		container = "0";
 		return (container);
 	}
 	if (num < 0)
@@ -34,7 +34,7 @@ char *num_strX(int num, int base)
 		{
 			tmp[i] = '0' + rem;
 		}
-		num = num / 10;
+		num = num / base;
 		i++;
 	}
 	for (j = 0; j < i; j++)
@@ -43,4 +43,5 @@ char *num_strX(int num, int base)
 	}
 	*(container + j) = '\0';
 	return (container);
+	free(container);
 }

@@ -3,6 +3,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 char *num_str(int num, int base);
 char *num_strX(int num, int base);

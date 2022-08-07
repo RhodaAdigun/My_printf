@@ -9,12 +9,13 @@ int print_string(const char *s)
 	int i, num;
 
 	num = 0;
-	if (s != NULL)
+	if (s)
 	{
 		for (i = 0; s[i] != '\0'; i++)
-			num += _putchar(s[i]);
+		{
+			_putchar(s[i]);
+			num++;
+		}
 	}
-	else
-		num += 0;
 	return (num);
 }

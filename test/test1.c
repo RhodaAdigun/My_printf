@@ -8,17 +8,34 @@
 
 int main(void)
 {
-	int y,len,len2;
+	int y;
+	void *addr;
 	
-	len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-	 _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
+	addr =(void *)0x7ffe637541f0;
+	_printf("Let's try to printf a simple sentence.\n");
+    	printf("Let's try to printf a simple sentence.\n");
+	_printf("Character:[%c]\n", 'H');
+	printf("Character:[%c]\n", 'H');
+	_printf("String:[%s]\n", "I am a string !");
+	printf("String:[%s]\n", "I am a string !");
+	_printf("\n------newline -------\n");
 	printf("\n------newline -------\n");
-	
-	y = printf("Hello %c %s world\n", 'P', "Ife");
+	_printf("Negative: %d\n", -635);
+	printf("Negative: %d\n", -635);
+	_printf("Binary: %b\n", 664);
+	printf("Binary: %b\n", 664);
+	_printf("Integer: %i\n", 7353);
+	printf("Integer: %i\n", 7353);
+	printf("Hexadecimal: %x\n", 45);
+	_printf("Hexadecimal: %x\n", 45);
+	printf("Hexadecimal: %X\n", 4566);
+	_printf("Hexadecimal: %X\n", 4566);
+	printf("Octal: %o\n", 43);
+	_printf("Octal: %o\n", 43);
+	printf("Address: %p\n", addr);
+	_printf("Address: %p\n", addr);
+	y = _printf("Hello %c %s world\n", 'P', "Ife");
+	printf("n = %d\n", y);
 	_printf("n = %d\n", y);
 	return (0);
 }

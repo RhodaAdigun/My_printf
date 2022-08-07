@@ -43,39 +43,38 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == 'd')
 			{
 				buffer = num_str(va_arg(ptr, int), 10);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
 			else if (format[i + 1] == 'i')
 			{
 				buffer = num_str(va_arg(ptr, int), 10);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
 			else if (format[i + 1] == 'b')
 			{
 				buffer = num_str(va_arg(ptr, int), 2);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
 			else if (format[i + 1] == 'o')
 			{
 				buffer = num_str(va_arg(ptr, int), 8);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
 			else if (format[i + 1] == 'x')
 			{
 				buffer = num_str(va_arg(ptr, int), 16);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
 			else if (format[i + 1] == 'u')
 			{
 				buffer = num_str(va_arg(ptr, int), 10);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
 			else if (format[i + 1] == 'X')
 			{
 				buffer = num_strX(va_arg(ptr, int), 16);
-				num += print_str(buffer);
+				num += print_string(buffer);
 			}
-
 			i += 2;
 		}
 	}
