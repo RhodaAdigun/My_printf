@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
  *_printf - prints string to output, produces output according to a format
@@ -9,6 +8,8 @@
 int _printf(const char *format, ...)
 {
 	int i, num;
+	char *buffer;
+
 	va_list ptr;
 
 	num = 0;
@@ -18,7 +19,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			num += _putchar(format[i]); /*counts the number of times it prints char*/
+			_putchar(format[i]); /*counts the number of times it prints char*/
+			num++;
 			i++;
 		}
 
@@ -26,7 +28,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == 'c')
 			{
-				num += _putchar(va_arg(ptr, int));
+				_putchar(va_arg(ptr, int));
+				num++;
 			}
 			else if (format[i + 1] == 's')
 			{
@@ -34,12 +37,45 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == '%')
 			{
-				num += _putchar('%');
+				_putchar('%');
+				num++;
 			}
 			else if (format[i + 1] == 'd')
 			{
-				num += print_number_base(va_arg(ptr, int *), 10);
+				buffer = num_str(va_arg(ptr, int), 10);
+				num += print_str(buffer);
 			}
+			else if (format[i + 1] == 'i')
+			{
+				buffer = num_str(va_arg(ptr, int), 10);
+				num += print_str(buffer);
+			}
+			else if (format[i + 1] == 'b')
+			{
+				buffer = num_str(va_arg(ptr, int), 2);
+				num += print_str(buffer);
+			}
+			else if (format[i + 1] == 'o')
+			{
+				buffer = num_str(va_arg(ptr, int), 8);
+				num += print_str(buffer);
+			}
+			else if (format[i + 1] == 'x')
+			{
+				buffer = num_str(va_arg(ptr, int), 16);
+				num += print_str(buffer);
+			}
+			else if (format[i + 1] == 'u')
+			{
+				buffer = num_str(va_arg(ptr, int), 10);
+				num += print_str(buffer);
+			}
+			else if (format[i + 1] == 'X')
+			{
+				buffer = num_strX(va_arg(ptr, int), 16);
+				num += print_str(buffer);
+			}
+
 			i += 2;
 		}
 	}
