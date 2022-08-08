@@ -12,7 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int i;
-	int identifierPrinted = 0, num = 0;
+	int identifier = 0, num = 0;
 	va_list ptr;
 
 	va_start(ptr, format);
