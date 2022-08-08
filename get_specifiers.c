@@ -26,7 +26,7 @@ int get_specifiers(char next_char, va_list ptr)
 	for (i = 0; func[i].indentifier != NULL;i++)
 	{
 		if (func[i].indentifier[0] == next_char)
-			return (func[i].printer(ptr));
+			return (func[i].pointer(ptr));
 	}
 	return (0);
 }
