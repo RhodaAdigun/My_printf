@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 
 	num = 0;
 	va_start(ptr, format);
-
 	for (i = 0; format[i] != '\0';)
 	{
 		if (format[i] != '%')
@@ -81,14 +80,8 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == '+')
 			{
-				if (va_arg(ptr, int) > 0)
-				{
-					num += _printf("+%d",va_arg(ptr, int));
-				}
-				else
-				{
-					num += _printf("%d", va_arg(ptr, int));
-				}
+				num += _printf("+%d", va_arg(ptr, int));
+				i++;
 			}
 			else if (format[i + 1] == '#')
 			{
@@ -100,6 +93,7 @@ int _printf(const char *format, ...)
 				{
 					num += _printf("0%x", va_arg(ptr, int));
 				}
+				i++;
 			}
 			else if (format[i + 1] == ' ')
 			{
@@ -111,6 +105,7 @@ int _printf(const char *format, ...)
 				{
 					num += _printf("%d", va_arg(ptr, int));
 				}
+				i++;
 			}
 
 			i += 2;

@@ -19,6 +19,8 @@ int print_string(const char *s)
 				_putchar('x');
 				_putchar('0');
 				_printf("%X", s[i]);
+				num += 4;
+				continue;
 			}
 			_putchar(s[i]);
 			num++;

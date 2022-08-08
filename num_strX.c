@@ -3,7 +3,7 @@
  * num_strX - prints number in a specified base with uppercase hex
  * @num: number to be converted to string
  * @base: number base we want num to be in form of
- * @container: Pointer to the new string
+ * Return: Pointer to the string created
  */
 char *num_strX(int num, int base)
 {

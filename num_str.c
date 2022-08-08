@@ -3,7 +3,7 @@
  * num_str - prints number in a specified base
  * @num: number to be converted to string
  * @base: number base we want num to be in form of
- * @container: Pointer to the new string
+ * Return: Pointer to string
  */
 char *num_str(int num, int base)
 {
