@@ -10,6 +10,7 @@ char *num_strX(int num, int base);
 int print_str(char *container);
 int _printf(const char *format, ...);
 int print_string(const char *s);
+int get_specifiers(char next_char, va_list ptr)
 int _putchar(char c);
 
 /**
