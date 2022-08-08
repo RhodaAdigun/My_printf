@@ -75,6 +75,44 @@ int _printf(const char *format, ...)
 				buffer = num_strX(va_arg(ptr, int), 16);
 				num += print_string(buffer);
 			}
+			else if (format[i + 1] == 'S')
+			{
+				num += print_string(va_arg(ptr, char *));
+			}
+			else if (format[i + 1] == '+')
+			{
+				if (va_arg(ptr, int) > 0)
+				{
+					num += _printf("+%d",va_arg(ptr, int));
+				}
+				else
+				{
+					num += _printf("%d", va_arg(ptr, int));
+				}
+			}
+			else if (format[i + 1] == '#')
+			{
+				if (format[i + 2] == 'o')
+				{
+					num += _printf("0%o", va_arg(ptr, int));
+				}
+				if (format[i + 2] == 'x')
+				{
+					num += _printf("0%x", va_arg(ptr, int));
+				}
+			}
+			else if (format[i + 1] == ' ')
+			{
+				if (va_arg(ptr, int) > 0)
+				{
+					num += _printf(" %d",va_arg(ptr, int));
+				}
+				else
+				{
+					num += _printf("%d", va_arg(ptr, int));
+				}
+			}
+
 			i += 2;
 		}
 	}

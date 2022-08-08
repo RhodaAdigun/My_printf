@@ -34,7 +34,7 @@ int main(void)
 	_printf("Octal: %o\n", 43);
 	printf("Address: %p\n", addr);
 	_printf("Address: %p\n", addr);
-	y = _printf("Hello %c %s world\n", 'P', "Ife");
+	y = _printf("Hello %c %s %S world\n", 'P', "Ife", "Oluwa\n");
 	printf("n = %d\n", y);
 	_printf("n = %d\n", y);
 	return (0);
