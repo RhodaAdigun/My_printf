@@ -30,3 +30,13 @@ int get_specifiers(char next_char, va_list ptr)
 	}
 	return (0);
 }
+
+/**
+ *print_char - replaces format specifier %c with character
+ *@ptr :points to each of the arguments in _printf
+ *Return : the number of character(1)
+ */
+
+int ptint_char(va_list ptr)
+{
+
