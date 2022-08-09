@@ -16,5 +16,10 @@ int main()
 	g = printf("he %u llo wo%brld \n", 144, 690);
 
 	printf("f = %d, g = %d\n", f, g);
+
+	f = _printf("he %X l%clo wo%xrld \n", 14984, 690, 990);
+	g = printf("he %X l%clo wo%xrld \n", 14984, 690, 990);
+
+	printf("f = %d, g = %d\n", f, g);
 	return (0);
 }

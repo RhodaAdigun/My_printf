@@ -48,49 +48,49 @@ int print_binary(va_list ptr)
 }
 
 /**
- * print_binary - calls the function that converts to binary
+ * print_oct - calls the function that converts to base 8
  * @ptr: points to arguments of printf function
  * Return: number of chars in string of integers
  */
 
-int print_binary(va_list ptr)
+int print_oct(va_list ptr)
 {
 	char *buffer;
 	int num;
 
-	buffer = num_str(va_arg(ptr, int), 2);
+	buffer = num_str(va_arg(ptr, int), 8);
 	num = print_string(buffer);
 	return (num);
 }
 
 /**
- * print_binary - calls the function that converts to binary
+ * print_hex - calls the function that converts to base 16
  * @ptr: points to arguments of printf function
  * Return: number of chars in string of integers
  */
 
-int print_binary(va_list ptr)
+int print_hex(va_list ptr)
 {
 	char *buffer;
 	int num;
 
-	buffer = num_str(va_arg(ptr, int), 2);
+	buffer = num_str(va_arg(ptr, int), 16);
 	num = print_string(buffer);
 	return (num);
 }
 
 /**
- * print_binary - calls the function that converts to binary
+ * print_HEX - calls the function that converts to base 16
  * @ptr: points to arguments of printf function
  * Return: number of chars in string of integers
  */
 
-int print_binary(va_list ptr)
+int print_HEX(va_list ptr)
 {
 	char *buffer;
 	int num;
 
-	buffer = num_str(va_arg(ptr, int), 2);
+	buffer = num_strX(va_arg(ptr, int), 16);
 	num = print_string(buffer);
 	return (num);
 }

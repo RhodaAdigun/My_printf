@@ -17,9 +17,9 @@ int _specifiers(char next, va_list ptr)
 		{"i", print_int},
 		{"u", print_int},
 		{"b", print_binary},
-		/*{"o", print_oct},*/
-		/*{"x", print_hex},*/
-		/*{"X", print_HEX},*/
+		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_HEX},
 		/*{"S", print_STR},*/
 		{NULL, NULL}
 	};
