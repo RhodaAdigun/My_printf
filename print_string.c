@@ -24,6 +24,9 @@ int print_string(const char *s)
  * print_string - Print out a string
  * @s: Pointer to the input string
  * Return: int
+ * Non printable characters (0 < ASCII value < 32 or >= 127) are printed 
+ * this way: \x, followed by the ASCII code value in hexadecimal
+ *  (upper case - always 2 characters)
  */
 int print_STRING(const char *s)
 {

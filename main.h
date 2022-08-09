@@ -20,6 +20,7 @@ int print_binary(va_list ptr);
 int print_HEX(va_list ptr);
 int print_hex(va_list ptr);
 int print_oct(va_list ptr);
+int print_STR(const char *s);
 
 /**
  * struct identifierStruct - structure definition of a printTypeStruct

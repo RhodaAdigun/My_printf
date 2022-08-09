@@ -20,7 +20,7 @@ int _specifiers(char next, va_list ptr)
 		{"o", print_oct},
 		{"x", print_hex},
 		{"X", print_HEX},
-		/*{"S", print_STR},*/
+		{"S", print_STR},
 		{NULL, NULL}
 	};
 
