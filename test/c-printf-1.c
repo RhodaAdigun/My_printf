@@ -34,9 +34,8 @@ void my_printf(const char *format, ...)
 
 void my_vprintf(const char *format, va_list args)
 {
-	int state = 0; //if it is not a format specifier
+	int state = 0; /*if it is not a format specifier*/
 	char buffer[65];
-	//printf("alx %c is %% cool %d sdjdslmf",'y', 2567)
 	while (*format)
 	{
 		if (state == 0)
@@ -46,7 +45,7 @@ void my_vprintf(const char *format, va_list args)
 			else
 				putchar(*format);
 		}
-		else //it is a format specifier
+		else
 		{
 			switch (*format)
 			{
