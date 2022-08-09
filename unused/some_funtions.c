@@ -16,7 +16,7 @@ int print_reverse(va_list ptr)
 	}
 	for (i = 0; str[i]; i++)
 		;
-for (i = i - 1; i >= 0; i--)
+	for (i = i - 1; i >= 0; i--)
 	{
 		char s = str[i];
 
