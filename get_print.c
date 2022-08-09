@@ -18,20 +18,6 @@ int print_int(va_list ptr)
 }
 
 /**
- * get_str - gets the string to print
- * @ptr: points to arguments in printf function
- * Return: number of chars in string
- */
-
-int get_str(va_list ptr)
-{
-	int num;
-
-	num = print_string(va_arg(ptr, char *));
-	return (num);
-}
-
-/**
  * print_binary - calls the function that converts to binary
  * @ptr: points to arguments of printf function
  * Return: number of chars in string of integers
