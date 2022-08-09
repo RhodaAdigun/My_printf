@@ -12,11 +12,11 @@ int _specifiers(char next, va_list ptr)
                                                                                                                                         
         identifierStruct func[] = {                                                                                                     
                 {"c", print_char},                                                                                                      
-                /*{"s", print_string},*/                                                                                                
-                /*{"d", print_int},*/                                                                                                   
+                {"s", print_string},                                                                                                
+                /*{"d", print_dec},*/                                                                                                   
                 /*{"i", print_int},*/                                                                                                   
-                /*{"u", print_unsigned},*/                                                                                              
-                /*{"b", print_unsignedToBinary},*/                                                                                      
+                /*{"u", print_dec},*/                                                                                              
+                /*{"b", binary},*/                                                                                      
                 /*{"o", print_oct},*/                                                                                                   
                 /*{"x", print_hex},*/                                                                                                   
                 /*{"X", print_HEX},*/                                                                                                   
