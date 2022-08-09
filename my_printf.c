@@ -9,7 +9,6 @@ int _printf(const char *format, ...)
 {
 	int i, num;
 	char *buffer;
-
 	va_list ptr;
 
 	num = 0;
@@ -22,7 +21,6 @@ int _printf(const char *format, ...)
 			num++;
 			i++;
 		}
-
 		else if (format[i] == '%')
 		{
 			if (format[i + 1] == 'c')
@@ -39,6 +37,17 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				num++;
 			}
+			else
+				_vprintf();
+			i += 2;
+		}
+	return (num);
+	}
+	
+	
+	
+int _vprintf(void)
+{
 			else if (format[i + 1] == 'd')
 			{
 				buffer = num_str(va_arg(ptr, int), 10);

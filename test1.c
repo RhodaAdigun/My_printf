@@ -23,7 +23,7 @@ int main(void)
 	_printf("Negative: %d\n", -6355890);
 	printf("Negative: %d\n", -6355890);
 	_printf("Binary: %b\n", 664);
-	printf("Binary: %b\n", 664);
+	/*printf("Binary: %b\n", 664);*/
 	_printf("Integer: %i\n", 735356778);
 	printf("Integer: %i\n", 735356778);
 	printf("Hexadecimal: %x\n", 45);
