@@ -1,5 +1,5 @@
 int print_non_printable(va_list types, char buffer[],
-	int flags, int width, int precision, int size)
+	int flags, int w)
 {
 	int i = 0, offset = 0;
 	char *str = va_arg(types, char *);
