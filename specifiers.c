@@ -21,6 +21,8 @@ int _specifiers(char next, va_list ptr)
 		{"x", print_hex},
 		{"X", print_HEX},
 		{"S", print_STR},
+		{"R", print_rot13string},
+		{"r", print_reverse},
 		{NULL, NULL}
 	};
 

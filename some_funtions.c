@@ -1,12 +1,16 @@
-<<<<<<< HEAD
-int print_non_printable(va_list types, char buffer[],
-	int flags, int w)
-=======
+#include "main.h"
+#include <unistd.h>
+
+/**
+ * print_reverse - reverses a string
+ * @ptr: points to argument in printf function
+ * Return: number of characters printed
+ */
+
 int print_reverse(va_list ptr)
->>>>>>> 5447e491234eb1e8c8b391169b54a0fec36628dd
 {
 	char *str;
-	int i, num = 0
+	int i, num = 0;
 
 	str = va_arg(ptr, char *);
 
@@ -26,10 +30,15 @@ int print_reverse(va_list ptr)
 	return (num);
 }
 
+/*
+ *print_rot13string - converts and prints a string in rot13
+ * @ptr: points to the arguments in printf function
+ * Return: number of chars printed
  */
+
 int print_rot13string(va_list ptr)
 {
-	char x;
+	char p;
 	char *str;
 	unsigned int i, j;
 	int num = 0;
@@ -46,8 +55,8 @@ int print_rot13string(va_list ptr)
 		{
 			if (in[j] == str[i])
 			{
-				x = out[j];
-				write(1, &x, 1);
+				p = out[j];
+				write(1, &p, 1);
 				num++;
 				break;
 			}

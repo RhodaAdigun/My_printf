@@ -22,7 +22,9 @@ int print_hex(va_list ptr);
 int print_oct(va_list ptr);
 int print_STRING(const char *s);
 int print_STR(va_list ptr);
-int flag_char(char flag);
+/*int flag_char(char flag);*/
+int print_rot13string(va_list ptr);
+int print_reverse(va_list ptr);
 
 /**
  * struct identifierStruct - structure definition of a printTypeStruct
