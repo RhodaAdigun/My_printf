@@ -39,7 +39,7 @@ char *num_strX(int num, int base)
 	}
 	for (j = 0; j < i; j++)
 	{
-		*(container + j) = tmp[i - 1 -j];
+		*(container + j) = tmp[i - 1 - j];
 	}
 	*(container + j) = '\0';
 	return (container);

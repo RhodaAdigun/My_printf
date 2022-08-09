@@ -1,21 +1,21 @@
 #include "main.h"
 /**
  * print_string - Print out a string
- * @ptr: Pointer to the input string
+ * @s: Pointer to the string to print
  * Return: int
  */
-int print_string(va_list ptr)
+int print_string(const char *s)
 {
 	int i;
-	char *str = va_arg(ptr, char*);
+	/*char *str = va_arg(ptr, char*);*/
 
-	if (str == NULL)
-		str = "(null)";
-	else if (*str == '\0')
-			return (-1);
+	if (s == NULL)
+		s = "(null)";
+	else if (*s == '\0')
+		return (-1);
 
-	for (i = 0; str[i]; i++)
-			_putchar(str[i]);
+	for (i = 0; s[i]; i++)
+		_putchar(s[i]);
 
 	return (i);
 }

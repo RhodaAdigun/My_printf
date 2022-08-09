@@ -12,9 +12,9 @@ int _specifiers(char next, va_list ptr)
 
 	identifierStruct func[] = {
 		{"c", print_char},
-		{"s", print_string},
-		/*{"d", print_int},*/
-		/*{"i", print_int},*/
+		{"s", get_str},
+		{"d", print_int},
+		{"i", print_int},
 		/*{"u", print_int},*/
 		/*{"b", print_binary},*/
 		/*{"o", print_oct},*/

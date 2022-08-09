@@ -13,8 +13,8 @@ int _printf(const char *format, ...)
 	int i;
 	int identifier = 0, num = 0;
 	va_list ptr;
+
 	va_start(ptr, format);
-	
 	if (format == NULL)
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
