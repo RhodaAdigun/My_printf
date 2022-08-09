@@ -46,3 +46,51 @@ int print_binary(va_list ptr)
 	num = print_string(buffer);
 	return (num);
 }
+
+/**
+ * print_binary - calls the function that converts to binary
+ * @ptr: points to arguments of printf function
+ * Return: number of chars in string of integers
+ */
+
+int print_binary(va_list ptr)
+{
+	char *buffer;
+	int num;
+
+	buffer = num_str(va_arg(ptr, int), 2);
+	num = print_string(buffer);
+	return (num);
+}
+
+/**
+ * print_binary - calls the function that converts to binary
+ * @ptr: points to arguments of printf function
+ * Return: number of chars in string of integers
+ */
+
+int print_binary(va_list ptr)
+{
+	char *buffer;
+	int num;
+
+	buffer = num_str(va_arg(ptr, int), 2);
+	num = print_string(buffer);
+	return (num);
+}
+
+/**
+ * print_binary - calls the function that converts to binary
+ * @ptr: points to arguments of printf function
+ * Return: number of chars in string of integers
+ */
+
+int print_binary(va_list ptr)
+{
+	char *buffer;
+	int num;
+
+	buffer = num_str(va_arg(ptr, int), 2);
+	num = print_string(buffer);
+	return (num);
+}
