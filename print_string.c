@@ -52,3 +52,31 @@ int print_STRING(const char *s)
 	}
 	return (num);
 }
+
+/**
+ * get_str - gets the string to print
+ * @ptr: points to arguments in printf function
+ * Return: number of chars in string
+ */
+
+int get_str(va_list ptr)
+{
+	int num;
+
+	num = print_string(va_arg(ptr, char *));
+	return (num);
+}
+
+/**
+ * get_str - gets the string to print
+ * @ptr: points to arguments in printf function
+ * Return: number of chars in string
+ */
+
+int print_STR(va_list ptr)
+{
+	int num;
+
+	num = print_STRING(va_arg(ptr, char *));
+	return (num);
+}
