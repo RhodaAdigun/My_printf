@@ -15,8 +15,8 @@ int _specifiers(char next, va_list ptr)
 		{"s", get_str},
 		{"d", print_int},
 		{"i", print_int},
-		/*{"u", print_int},*/
-		/*{"b", print_binary},*/
+		{"u", print_int},
+		{"b", print_binary},
 		/*{"o", print_oct},*/
 		/*{"x", print_hex},*/
 		/*{"X", print_HEX},*/

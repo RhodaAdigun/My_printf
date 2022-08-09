@@ -16,6 +16,7 @@ int _specifiers(char next, va_list ptr);
 int print_char(va_list ptr);
 int print_int(va_list ptr);
 int print_string(const char *s);
+int print_binary(va_list ptr);
 
 /**
  * struct identifierStruct - structure definition of a printTypeStruct
