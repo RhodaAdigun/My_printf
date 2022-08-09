@@ -23,5 +23,6 @@ int main()
 	printf("f = %d, g = %d\n", f, g);
 
 	_printf("%S\n", "Best\nSchool");
+	
 	return (0);
 }

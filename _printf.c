@@ -25,10 +25,10 @@ int _printf(const char *format, ...)
 			num++;
 			continue;
 		}
-		if (format[i + 1] == '%' || format[i + 1] == '+'
-		|| format[i + 1] == '#' || format[i + 1] == ' ')
+		if (format[i + 1] == '%')
 		{
-			num += flag_char(format[i + 1])
+			_putchar('%');
+			num++;
 			i++;
 			continue;
 		}
